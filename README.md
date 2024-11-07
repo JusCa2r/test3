@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Next.js SaaS Starter
 
 This is a starter template for building a SaaS application using **Next.js** with support for authentication, Stripe integration for payments, and a dashboard for logged-in users.
@@ -124,3 +125,6 @@ While this template is intentionally minimal and to be used as a learning resour
 - https://achromatic.dev
 - https://shipfa.st
 - https://makerkit.dev
+=======
+# test3
+>>>>>>> f0742dba1b879aa660f2c7f12c548ec314bf9ea6
