@@ -40,7 +40,7 @@ async function getPostgresURL(): Promise<string> {
 }
 
 async function setupLocalPostgres() {
-  console.log('Checking if Docker is installed...');
+  console.log('Checking if Dockering is installed...');
   try {
     await execAsync('docker --version');
     console.log('Docker is installed.');
