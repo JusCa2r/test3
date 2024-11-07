@@ -12,6 +12,9 @@
 ```bash
 pnpm install
 ```
+Install PostGre: https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
+Install Docker
+Install DBeaver
 
 ## Running Locally
 
