@@ -1,13 +1,12 @@
-import { drizzle } from 'drizzle-orm/postgres-js';
-import postgres from 'postgres';
-import * as schema from './schema';
-import dotenv from 'dotenv';
+import 'dotenv/config';
+import { drizzle } from 'drizzle-orm/node-postgres';
 
-dotenv.config();
+// You can specify any property from the node-postgres connection options
+const db = drizzle({ 
+  connection: { 
+    connectionString: process.env.DATABASE_URL!,
+    ssl: true
+  }
+});
 
-if (!process.env.POSTGRES_URL) {
-  throw new Error('POSTGRES_URL environment variable is not set');
-}
-
-export const client = postgres(process.env.POSTGRES_URL);
-export const db = drizzle(client, { schema });
+export { db };

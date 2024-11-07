@@ -18,7 +18,7 @@ export const users = pgTable('users', {
   username: varchar('username', { length: 50 }).unique().notNull(),
   email: varchar('email', { length: 255 }).unique().notNull(),
   passwordHash: text('password_hash').notNull(),
-  uuid: uuid('uuid').unique().default('gen_random_uuid()'),
+  uuid: uuid('uuid').unique(),
   createdAt: timestamp('created_at').defaultNow(),
   deletedAt: timestamp('deleted_at'),
   lastUpdated: timestamp('last_updated'),

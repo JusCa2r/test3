@@ -1,5 +1,3 @@
-import { db } from './drizzle';
-
 import { 
   users, ranks, contentCreators, videoEditors, profiles,
   actionTypes, qualityLevels, projectFormats, projectPricingTypes,
@@ -8,6 +6,12 @@ import {
 } from './schema';
 
 import { hashPassword } from '@/lib/auth/session';
+
+import { drizzle } from 'drizzle-orm/postgres-js';
+import postgres from 'postgres';
+
+const client = postgres(process.env.DATABASE_URL!);
+const db = drizzle(client);
 
 async function seed() {
   console.log('🌱 Seeding database...');
@@ -204,7 +208,12 @@ async function seed() {
   console.log('✅ Seeding completed!');
 }
 
-seed().catch((error) => {
-  console.error('Error seeding database:', error);
-  process.exit(1);
-});
+// Replace the direct seed() call with an IIFE (Immediately Invoked Function Expression)
+(async () => {
+  try {
+    await seed();
+  } catch (error) {
+    console.error('Error seeding database:', error);
+    process.exit(1);
+  }
+})();

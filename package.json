@@ -1,5 +1,6 @@
 {
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
@@ -28,7 +29,6 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "dotenv": "^16.4.5",
-    "drizzle-kit": "^0.27.1",
     "drizzle-orm": "^0.36.0",
     "git": "^0.1.5",
     "jose": "^5.9.6",
@@ -37,16 +37,20 @@
     "pg": "^8.13.1",
     "postcss": "^8.4.47",
     "postgres": "^3.4.5",
-    "react": "19.0.0-rc-cd22717c-20241013",
-    "react-dom": "19.0.0-rc-cd22717c-20241013",
+    "react": "^18",
+    "react-dom": "^18",
     "server-only": "^0.0.1",
     "status": "^0.0.13",
-    "stripe": "^16.12.0",
     "tailwind-merge": "^2.5.4",
     "tailwindcss": "^3.4.14",
     "tailwindcss-animate": "^1.0.7",
     "tailwindcss-react-aria-components": "1.1.6",
     "typescript": "^5.6.3",
     "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.11.10",
+    "drizzle-kit": "^0.27.1",
+    "tsx": "^4.19.2"
   }
 }
