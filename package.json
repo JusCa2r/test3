@@ -33,7 +33,7 @@
     "git": "^0.1.5",
     "jose": "^5.9.6",
     "lucide-react": "^0.454.0",
-    "next": "^14.1.0",
+    "next": "15.0.4-canary.2",
     "pg": "^8.13.1",
     "postcss": "^8.4.47",
     "postgres": "^3.4.5",
@@ -50,7 +50,7 @@
   },
   "devDependencies": {
     "@types/pg": "^8.11.10",
-    "drizzle-kit": "^0.27.1",
+    "drizzle-kit": "^0.28.0",
     "tsx": "^4.19.2"
   }
 }

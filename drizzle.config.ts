@@ -5,9 +5,9 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 
 export default defineConfig({
-  out: "./drizzle",
+  out: "./lib/db/migrations",
   dialect: "postgresql",
-  schema: "./libdb/schema.ts",
+  schema: "./lib/db/schema.ts",
 
   dbCredentials: {
     url: process.env.POSTGRES_URL!,
@@ -25,14 +25,6 @@ export default defineConfig({
     prefix: "timestamp",
     table: "__drizzle_migrations__",
     schema: "public",
-  },
-
-  entities: {
-    roles: {
-      provider: '',
-      exclude: [],
-      include: []
-    }
   },
 
   breakpoints: true,
