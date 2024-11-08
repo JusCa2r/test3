@@ -1,12 +1,19 @@
 import 'dotenv/config';
-import { drizzle } from 'drizzle-orm/node-postgres';
+import { drizzle } from 'drizzle-orm/postgres-js'
+import postgres from 'postgres'
 
-// You can specify any property from the node-postgres connection options
-const db = drizzle({ 
-  connection: { 
-    connectionString: process.env.DATABASE_URL!,
-    ssl: true
-  }
-});
+const connectionString = process.env.DATABASE_URL!
 
-export { db };
+// Create the postgres client with explicit configuration
+const client = postgres(connectionString, {
+  username: 'postgres',
+  password: 'postgres',
+  host: 'localhost',
+  port: 54322,
+  database: 'postgres',
+  ssl: false,
+})
+
+const db = drizzle(client);
+
+export default db;

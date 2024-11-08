@@ -7,11 +7,7 @@ import {
 
 import { hashPassword } from '@/lib/auth/session';
 
-import { drizzle } from 'drizzle-orm/postgres-js';
-import postgres from 'postgres';
-
-const client = postgres(process.env.DATABASE_URL!);
-const db = drizzle(client);
+import db from './drizzle';
 
 async function seed() {
   console.log('🌱 Seeding database...');

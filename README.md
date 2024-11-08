@@ -12,9 +12,9 @@
 ```bash
 pnpm install
 ```
-Install PostGre: https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
-Install Docker
-Install DBeaver
+- Install PostGre: https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
+- Install Docker
+- Install DBeaver
 
 ## Running Locally
 
@@ -24,17 +24,24 @@ Use the included setup script to create your `.env` file:
 pnpm db:setup
 ```
 
-Then, run the database migrations and seed the database with a default user and team:
+Then, run the database migrations and seed the database with a default user:
 
 ```bash
 pnpm db:migrate
 pnpm db:seed
 ```
 
-This will create the following user and team:
+This will create the following user:
 
-- User: `test@test.com`
-- Password: `admin123`
+Content Creator:
+
+- Email: `creator1@example.com`
+- Password: `password1`
+
+Editor:
+
+- Email: `editor1@example.com`
+- Password: `password3`
 
 You can, of course, create new users as well through `/sign-up`.
 
