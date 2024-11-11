@@ -5,7 +5,7 @@ import {
   editorSelectionMethods, parameterTypes, templates
 } from './schema';
 
-import { hashPassword } from '@/lib/auth/session';
+import { hashPassword } from '@/lib/server/session';
 
 import db from './drizzle';
 
